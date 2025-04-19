@@ -1,4 +1,4 @@
-blinkerlick
+blinker
 Flask
 Flask-SQLAlchemy
 greenlet
@@ -6,6 +6,6 @@ itsdangerous
 Jinja2
 MarkupSafe
 PyMySQL
-SQLAlchemy0
-typing_extensions1
+SQLAlchemy
+typing_extensions
 Werkzeug
