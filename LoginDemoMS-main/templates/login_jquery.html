@@ -1,22 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Login With Jquery</title>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="{{ url_for('static', filename='js/login_jquery.js') }}"></script>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
-</head>
-<body>
-    <h1>Login Jquery</h1>
-    <form id="loginForm">
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/styles.css') }}"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Login</h1>
+
+      <!-- Form Đăng Nhập -->
+      <form id="loginForm">
         <label for="username">Username:</label>
-        <input type="text" id="username" name="username" required><br><br>
+        <input
+          type="text"
+          id="username"
+          name="username"
+          placeholder="Nhập tên đăng nhập"
+          required
+        />
+
         <label for="password">Password:</label>
-        <input type="password" id="password" name="password" required><br><br>
-        <button type="submit">Login</button>
-    </form>
-    <p id="responseMessage"></p>
-</body>
+        <input
+          type="password"
+          id="password"
+          name="password"
+          placeholder="Nhập mật khẩu"
+          required
+        />
+
+        <button type="submit">Đăng nhập</button>
+        <p id="responseMessage">&nbsp;</p>
+        <p class="switch-text">
+          Bạn chưa có tài khoản?
+          <a href="#" id="showRegister">Đăng ký</a>
+        </p>
+      </form>
+
+      <!-- Form Đăng Ký -->
+      <form id="registerForm" style="display: none">
+        <label for="regUsername">Username:</label>
+        <input
+          type="text"
+          id="regUsername"
+          placeholder="Tạo tên đăng nhập"
+          required
+        />
+
+        <label for="regPassword">Password:</label>
+        <input
+          type="password"
+          id="regPassword"
+          placeholder="Tạo mật khẩu"
+          required
+        />
+
+        <label for="regConfirm">Xác nhận mật khẩu:</label>
+        <input
+          type="password"
+          id="regConfirm"
+          placeholder="Nhập lại mật khẩu"
+          required
+        />
+
+        <button type="submit">Đăng ký</button>
+        <p id="registerMessage">&nbsp;</p>
+        <p class="switch-text">
+          Đã có tài khoản?
+          <a href="#" id="showLogin">Quay lại đăng nhập</a>
+        </p>
+      </form>
+    </div>
+  </body>
 </html>

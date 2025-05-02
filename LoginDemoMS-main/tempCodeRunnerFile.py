@@ -1,0 +1,1 @@
+ # app.run(host='0.0.0.0', debug=True)  # Cho phép truy cập từ mọi IP
